@@ -1,11 +1,24 @@
+nav {
+  background-color: #023047;
+  font-family: "Montserrat";
+}
 .jumbotron {
   padding-top: 7rem;
   background-color: #e2edff;
 }
+#About {
+  background-color: #ffffff;
+}
 #Projects {
   background-color: #e2edff;
 }
-
+.btn {
+  background-color: #023047;
+  border-color: #023047;
+}
 section {
   padding-top: 5rem;
+}
+footer {
+  background-color: #023047;
 }
