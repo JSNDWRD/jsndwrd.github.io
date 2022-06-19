@@ -149,20 +149,28 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <form>
+            <div class="myAlert alert alert-success alert-dismissible fade show d-none" role="alert">
+              <strong>Thanks!</strong> Your message has been sent.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="Name" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="Email" />
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4"></textarea>
+                <textarea class="form-control" id="message" rows="4" name="Message"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary btn-send">Submit</button>
+              <button class="btn btn-primary btn-load d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -182,5 +190,26 @@
       <p>Created by <a class="text-white fw-bold" href="https://www.instagram.com/jsndwrd/" target="_blank">Jason Edward</a></p>
     </footer>
     <!-- Footer End -->
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbygUEwAnQy2GL1N4TWY0mg06zAen6ZfIlShlPZ9W2ybo69ulRDWmaUII5qrA4IQOUGw/exec";
+      const form = document.forms["contact-form"];
+      const btnSend = document.querySelector(".btn-send");
+      const btnLoad = document.querySelector(".btn-load");
+      const myAlert = document.querySelector(".myAlert");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        btnLoad.classList.toggle("d-none");
+        btnSend.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            btnLoad.classList.toggle("d-none");
+            btnSend.classList.toggle("d-none");
+            myAlert.classList.toggle("d-none");
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
