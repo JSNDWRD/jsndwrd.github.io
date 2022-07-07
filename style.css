@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 nav {
-  background-color: #023047;
-  font-family: "Montserrat";
+  background-color: #003049;
+  font-family: "Segoe UI";
   font-weight: 500;
 }
 .jumbotron {
@@ -16,14 +16,14 @@ nav {
 }
 
 .btn {
-  background-color: #023047;
-  border-color: #023047;
+  background-color: #003049;
+  border-color: #003049;
 }
 section {
   padding-top: 5rem;
 }
 footer {
-  background-color: #023047;
+  background-color: #003049;
 }
 
 .projectlink {
@@ -32,7 +32,17 @@ footer {
 }
 
 .projectlink:hover {
-  font-style: italic;
-  font-weight: 700;
   color: #212529;
+}
+
+.code {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #ab2330;
+  opacity: 0;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+}
+
+.projectlink:hover .code {
+  opacity: 1;
 }
