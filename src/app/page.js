@@ -1,113 +1,264 @@
-import Image from "next/image";
+import React from "react";
+import Head from "next/head";
+import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import Skill from "@/components/Skill";
+import Navigation from "@/components/Navigation";
+import Button from "@/components/Button";
+import ProgressBar from "@/components/ProgressBar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Head>
+        <title>jsndwrd</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      </Head>
+      <Navigation />
+      <main className="bg-primary flex text-text mt-20">
+        <ProgressBar />
+        <section className="h-[calc(100vh-5rem)] basis-1/3 flex flex-col">
+          <div className="p-4 pl-12 fixed w-1/3 font-medium">
+            <p className="text-2xl mb-1">Hello World, I am</p>
+            <h1 className="text-8xl font-bebasneue leading-[.8]">
+              Jason Edward Salim
+            </h1>
+            <h2 className="text-2xl">Web Developer</h2>
+            <p className="my-4">A highschool student who likes to code</p>
+            <div className="flex flex-wrap gap-4 items-center">
+              <Button text="Let's Talk" />
+              <a href="https://www.instagram.com/jsndwrd" target="_blank">
+                <FaInstagram
+                  size={35}
+                  className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
+                />
+              </a>
+              <a href="https://www.twitter.com/jsndwrd" target="_blank">
+                <FaTwitter
+                  size={35}
+                  className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jason-edward-salim-50751927a/"
+                target="_blank"
+              >
+                <FaLinkedin
+                  size={35}
+                  className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
+                />
+              </a>
+            </div>
+            <p className="mt-8">&copy; 2024 | Created by jsndwrd</p>
+          </div>
+        </section>
+        <section
+          id="mainContent"
+          className=" bg-primary basis-2/3 pb-4 pl-8 pr-2"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            delectus, aperiam quibusdam a non minus aut impedit exercitationem
+            nisi aliquid at perferendis! Suscipit, nulla. Accusamus quidem,
+            quaerat quo blanditiis modi nulla cum autem voluptatem consequuntur
+            totam ipsam officia dicta natus! Obcaecati adipisci repellat
+            dolorem, similique quasi non voluptate ipsa at! Tempore, excepturi
+            architecto. Consequuntur nemo recusandae nulla quisquam mollitia hic
+            cumque ipsum neque quibusdam! Eos debitis earum officia tenetur unde
+            pariatur dolore veniam omnis cumque fugit ut beatae aperiam tempora
+            ipsum odit facere commodi voluptates, quo dolorem culpa vitae
+            fugiat. Deserunt fugit necessitatibus nobis dolore reiciendis?
+            Voluptas dicta porro eveniet aut aliquam, eius, blanditiis nemo, non
+            quibusdam perferendis expedita. Perferendis ea cum eaque illo
+            reiciendis, ipsa veritatis facilis mollitia distinctio excepturi
+            vero consequuntur reprehenderit aspernatur sint quasi eum et. Labore
+            eum ratione, consectetur autem excepturi adipisci tenetur quam
+            beatae numquam nisi hic, repudiandae id. Nulla eius ipsa vitae
+            commodi minima adipisci fugit distinctio, nemo ea, dignissimos
+            repellendus ullam mollitia! Odio officiis, maiores, voluptate
+            laborum molestias enim pariatur, eius autem vel nulla quia eveniet
+            modi eos doloribus exercitationem soluta perspiciatis ullam nobis.
+            Exercitationem autem corrupti rem amet minima quibusdam quae,
+            incidunt natus deserunt. At aperiam aut quod fugit ipsam tempore
+            voluptatibus nam. Iste exercitationem omnis non laudantium, culpa
+            consectetur incidunt in? Debitis deserunt commodi corporis voluptas
+            mollitia necessitatibus magni vel obcaecati quisquam adipisci.
+            Molestias sapiente harum necessitatibus vitae cum corrupti
+            perspiciatis, asperiores culpa enim aut non, autem voluptas libero
+            ipsam nihil iure eligendi deserunt facilis commodi saepe eveniet! Et
+            debitis at ducimus quis ea cumque est assumenda harum dicta tempore
+            itaque tempora alias quasi, laborum voluptates incidunt! Aliquid
+            ipsa sit blanditiis aut voluptatibus alias eveniet corrupti sed rem
+            eum pariatur non cupiditate fugiat, similique voluptatem doloremque
+            expedita omnis in tempore quidem et magni. Ipsam saepe expedita
+            deserunt tempora reprehenderit nobis accusantium.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            delectus, aperiam quibusdam a non minus aut impedit exercitationem
+            nisi aliquid at perferendis! Suscipit, nulla. Accusamus quidem,
+            quaerat quo blanditiis modi nulla cum autem voluptatem consequuntur
+            totam ipsam officia dicta natus! Obcaecati adipisci repellat
+            dolorem, similique quasi non voluptate ipsa at! Tempore, excepturi
+            architecto. Consequuntur nemo recusandae nulla quisquam mollitia hic
+            cumque ipsum neque quibusdam! Eos debitis earum officia tenetur unde
+            pariatur dolore veniam omnis cumque fugit ut beatae aperiam tempora
+            ipsum odit facere commodi voluptates, quo dolorem culpa vitae
+            fugiat. Deserunt fugit necessitatibus nobis dolore reiciendis?
+            Voluptas dicta porro eveniet aut aliquam, eius, blanditiis nemo, non
+            quibusdam perferendis expedita. Perferendis ea cum eaque illo
+            reiciendis, ipsa veritatis facilis mollitia distinctio excepturi
+            vero consequuntur reprehenderit aspernatur sint quasi eum et. Labore
+            eum ratione, consectetur autem excepturi adipisci tenetur quam
+            beatae numquam nisi hic, repudiandae id. Nulla eius ipsa vitae
+            commodi minima adipisci fugit distinctio, nemo ea, dignissimos
+            repellendus ullam mollitia! Odio officiis, maiores, voluptate
+            laborum molestias enim pariatur, eius autem vel nulla quia eveniet
+            modi eos doloribus exercitationem soluta perspiciatis ullam nobis.
+            Exercitationem autem corrupti rem amet minima quibusdam quae,
+            incidunt natus deserunt. At aperiam aut quod fugit ipsam tempore
+            voluptatibus nam. Iste exercitationem omnis non laudantium, culpa
+            consectetur incidunt in? Debitis deserunt commodi corporis voluptas
+            mollitia necessitatibus magni vel obcaecati quisquam adipisci.
+            Molestias sapiente harum necessitatibus vitae cum corrupti
+            perspiciatis, asperiores culpa enim aut non, autem voluptas libero
+            ipsam nihil iure eligendi deserunt facilis commodi saepe eveniet! Et
+            debitis at ducimus quis ea cumque est assumenda harum dicta tempore
+            itaque tempora alias quasi, laborum voluptates incidunt! Aliquid
+            ipsa sit blanditiis aut voluptatibus alias eveniet corrupti sed rem
+            eum pariatur non cupiditate fugiat, similique voluptatem doloremque
+            expedita omnis in tempore quidem et magni. Ipsam saepe expedita
+            deserunt tempora reprehenderit nobis accusantium.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            delectus, aperiam quibusdam a non minus aut impedit exercitationem
+            nisi aliquid at perferendis! Suscipit, nulla. Accusamus quidem,
+            quaerat quo blanditiis modi nulla cum autem voluptatem consequuntur
+            totam ipsam officia dicta natus! Obcaecati adipisci repellat
+            dolorem, similique quasi non voluptate ipsa at! Tempore, excepturi
+            architecto. Consequuntur nemo recusandae nulla quisquam mollitia hic
+            cumque ipsum neque quibusdam! Eos debitis earum officia tenetur unde
+            pariatur dolore veniam omnis cumque fugit ut beatae aperiam tempora
+            ipsum odit facere commodi voluptates, quo dolorem culpa vitae
+            fugiat. Deserunt fugit necessitatibus nobis dolore reiciendis?
+            Voluptas dicta porro eveniet aut aliquam, eius, blanditiis nemo, non
+            quibusdam perferendis expedita. Perferendis ea cum eaque illo
+            reiciendis, ipsa veritatis facilis mollitia distinctio excepturi
+            vero consequuntur reprehenderit aspernatur sint quasi eum et. Labore
+            eum ratione, consectetur autem excepturi adipisci tenetur quam
+            beatae numquam nisi hic, repudiandae id. Nulla eius ipsa vitae
+            commodi minima adipisci fugit distinctio, nemo ea, dignissimos
+            repellendus ullam mollitia! Odio officiis, maiores, voluptate
+            laborum molestias enim pariatur, eius autem vel nulla quia eveniet
+            modi eos doloribus exercitationem soluta perspiciatis ullam nobis.
+            Exercitationem autem corrupti rem amet minima quibusdam quae,
+            incidunt natus deserunt. At aperiam aut quod fugit ipsam tempore
+            voluptatibus nam. Iste exercitationem omnis non laudantium, culpa
+            consectetur incidunt in? Debitis deserunt commodi corporis voluptas
+            mollitia necessitatibus magni vel obcaecati quisquam adipisci.
+            Molestias sapiente harum necessitatibus vitae cum corrupti
+            perspiciatis, asperiores culpa enim aut non, autem voluptas libero
+            ipsam nihil iure eligendi deserunt facilis commodi saepe eveniet! Et
+            debitis at ducimus quis ea cumque est assumenda harum dicta tempore
+            itaque tempora alias quasi, laborum voluptates incidunt! Aliquid
+            ipsa sit blanditiis aut voluptatibus alias eveniet corrupti sed rem
+            eum pariatur non cupiditate fugiat, similique voluptatem doloremque
+            expedita omnis in tempore quidem et magni. Ipsam saepe expedita
+            deserunt tempora reprehenderit nobis accusantium.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            delectus, aperiam quibusdam a non minus aut impedit exercitationem
+            nisi aliquid at perferendis! Suscipit, nulla. Accusamus quidem,
+            quaerat quo blanditiis modi nulla cum autem voluptatem consequuntur
+            totam ipsam officia dicta natus! Obcaecati adipisci repellat
+            dolorem, similique quasi non voluptate ipsa at! Tempore, excepturi
+            architecto. Consequuntur nemo recusandae nulla quisquam mollitia hic
+            cumque ipsum neque quibusdam! Eos debitis earum officia tenetur unde
+            pariatur dolore veniam omnis cumque fugit ut beatae aperiam tempora
+            ipsum odit facere commodi voluptates, quo dolorem culpa vitae
+            fugiat. Deserunt fugit necessitatibus nobis dolore reiciendis?
+            Voluptas dicta porro eveniet aut aliquam, eius, blanditiis nemo, non
+            quibusdam perferendis expedita. Perferendis ea cum eaque illo
+            reiciendis, ipsa veritatis facilis mollitia distinctio excepturi
+            vero consequuntur reprehenderit aspernatur sint quasi eum et. Labore
+            eum ratione, consectetur autem excepturi adipisci tenetur quam
+            beatae numquam nisi hic, repudiandae id. Nulla eius ipsa vitae
+            commodi minima adipisci fugit distinctio, nemo ea, dignissimos
+            repellendus ullam mollitia! Odio officiis, maiores, voluptate
+            laborum molestias enim pariatur, eius autem vel nulla quia eveniet
+            modi eos doloribus exercitationem soluta perspiciatis ullam nobis.
+            Exercitationem autem corrupti rem amet minima quibusdam quae,
+            incidunt natus deserunt. At aperiam aut quod fugit ipsam tempore
+            voluptatibus nam. Iste exercitationem omnis non laudantium, culpa
+            consectetur incidunt in? Debitis deserunt commodi corporis voluptas
+            mollitia necessitatibus magni vel obcaecati quisquam adipisci.
+            Molestias sapiente harum necessitatibus vitae cum corrupti
+            perspiciatis, asperiores culpa enim aut non, autem voluptas libero
+            ipsam nihil iure eligendi deserunt facilis commodi saepe eveniet! Et
+            debitis at ducimus quis ea cumque est assumenda harum dicta tempore
+            itaque tempora alias quasi, laborum voluptates incidunt! Aliquid
+            ipsa sit blanditiis aut voluptatibus alias eveniet corrupti sed rem
+            eum pariatur non cupiditate fugiat, similique voluptatem doloremque
+            expedita omnis in tempore quidem et magni. Ipsam saepe expedita
+            deserunt tempora reprehenderit nobis accusantium.
           </p>
-        </a>
-      </div>
-    </main>
+        </section>
+      </main>
+    </div>
   );
+}
+
+{
+  /*<main className="bg-slate-50 mt-16 pb-10 font-inter">
+        <section className="min-h-screen">
+          <div className="text-center h- sm:text-left px-4 sm:px-10 pt-2 pb-10">
+            <div className="flex h-full my-2">
+              <div className=" mx-auto sm:mx-0">
+                <Image src={profile} className="w-64 h-64 sm:w-auto sm:h-auto max-lg:hidden rounded-l-md grayscale-0" />
+              </div>
+              <div className="bg-white grow text-center sm:text-left p-4 sm:p-10 ">
+                <div className="p-5">
+                  <h1 className="text-4xl sm:text-7xl font-bold font-playfair text-neutral-950 mb-4">Hello World!</h1>
+                  <span className="text-base sm:text-lg text-neutral-950">
+                    As a web developer, I specialize in creating visually appealing and highly functional websites using HTML, CSS, and JavaScript. With a strong design sense, I bring digital concepts to life, ensuring seamless user
+                    experiences across various devices. My expertise lies in efficiently translating creative ideas into clean code, utilizing the latest tools and frameworks for optimal performance. I collaborate closely with clients and
+                    design teams, thriving on problem-solving and ensuring websites maintain high quality. Committed to staying updated on industry trends, I constantly seek opportunities to enhance my skills and integrate innovative
+                    solutions into my projects.
+                  </span>
+                  <div className="flex items-center my-2 text-xl sm:text-3xl gap-3">
+                    <a href="https://www.instagram.com/jsndwrd" target="_blank">
+                      <FaInstagram className="hover:fill-blue-500 fill-neutral-950 hover:scale-125 hover:mx-2 transition-all" />
+                    </a>
+                    <a href="https://www.twitter.com/jsndwrd" target="_blank">
+                      <FaTwitter className="hover:fill-blue-500 fill-neutral-950 hover:scale-125 hover:mx-2 transition-all" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jason-edward-salim-50751927a/" target="_blank">
+                      <FaLinkedin className="hover:fill-blue-500 fill-neutral-950 hover:scale-125 hover:mx-2 transition-all" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-white">
+          <div className="py-2 px-4">
+            <h3 className="text-2xl sm:text-3xl font-medium py-2">Skills</h3>
+            <div className="flex flex-wrap gap-2 justify-center">
+              <Skill skill="HTML" proficiency="Advanced" time="3" />
+              <Skill skill="CSS" proficiency="Advanced" time="3" />
+              <Skill skill="Javascript" proficiency="Intermediate" time="2" />
+              <Skill skill="TailwindCSS" proficiency="Advanced" time="2" />
+              <Skill skill="ReactJS" proficiency="Novice" time="1" />
+              <Skill skill="NextJS" proficiency="Novice" time="1" />
+              <Skill skill="Python" proficiency="Intermediate" time="2" />
+              <Skill skill="Bootstrap" proficiency="Advanced" time="2" />
+            </div>
+          </div>
+          <div className="py-2 px-4">
+            <h3 className="text-2xl sm:text-3xl font-medium py-2">Projects</h3>
+          </div>
+        </section>
+      </main>*/
 }
