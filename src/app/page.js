@@ -5,6 +5,8 @@ import Skill from "@/components/Skill";
 import Navigation from "@/components/Navigation";
 import Button from "@/components/Button";
 import ProgressBar from "@/components/ProgressBar";
+import "@fontsource-variable/inter";
+import "@fontsource/bebas-neue";
 
 export default function Home() {
   return (
@@ -14,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <Navigation />
-      <main className="bg-primary lg:flex text-text mt-20">
+      <main className="bg-primary  lg:flex text-text mt-20">
         <ProgressBar />
         <section className="h-[calc(100vh-5rem)] mb-2 w-screen lg:w-1/3 flex flex-col justify-center">
           <div className="p-4   bg-primary pl-12 w-screen lg:w-1/3 lg:fixed font-medium overflow-hidden">
