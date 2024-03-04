@@ -14,10 +14,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <Navigation />
-      <main className="bg-primary flex text-text mt-20">
+      <main className="bg-primary lg:flex text-text mt-20">
         <ProgressBar />
-        <section className="h-[calc(100vh-5rem)] basis-1/3 flex flex-col">
-          <div className="p-4 pl-12 fixed w-1/3 font-medium">
+        <section className="h-[calc(100vh-5rem)] mb-2 w-screen lg:w-1/3 flex flex-col justify-center">
+          <div className="p-4   bg-primary pl-12 w-screen lg:w-1/3 lg:fixed font-medium overflow-hidden">
             <p className="text-2xl mb-1">Hello World, I am</p>
             <h1 className="text-8xl font-bebasneue leading-[.8]">
               Jason Edward Salim
@@ -53,7 +53,7 @@ export default function Home() {
         </section>
         <section
           id="mainContent"
-          className=" bg-primary basis-2/3 pb-4 pl-8 pr-2"
+          className=" bg-primary w-screen lg:w-2/3 pb-4 pl-8 pr-2"
         >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
