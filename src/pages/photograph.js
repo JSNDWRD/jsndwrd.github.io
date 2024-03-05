@@ -1,10 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
-import Skill from "@/components/Skill";
 import Navigation from "@/components/Navigation";
 import Button from "@/components/Button";
 import ProgressBar from "@/components/ProgressBar";
+import "@fontsource-variable/inter";
+import "@fontsource/bebas-neue";
 import "../../node_modules/tailwindcss/tailwind.css";
 import "../app/globals.css";
 
