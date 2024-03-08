@@ -28,27 +28,29 @@ export default function Home() {
             <p className="my-4">A highschool student who likes to code</p>
             <div className="flex flex-wrap gap-4 items-center">
               <Button text="Let's Talk" />
-              <a href="https://www.instagram.com/jsndwrd" target="_blank">
-                <FaInstagram
-                  size={35}
-                  className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
-                />
-              </a>
-              <a href="https://www.twitter.com/jsndwrd" target="_blank">
-                <FaTwitter
-                  size={35}
-                  className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jason-edward-salim-50751927a/"
-                target="_blank"
-              >
-                <FaLinkedin
-                  size={35}
-                  className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
-                />
-              </a>
+              <div className="flex gap-4">
+                <a href="https://www.instagram.com/jsndwrd" target="_blank">
+                  <FaInstagram
+                    size={35}
+                    className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
+                  />
+                </a>
+                <a href="https://www.twitter.com/jsndwrd" target="_blank">
+                  <FaTwitter
+                    size={35}
+                    className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jason-edward-salim-50751927a/"
+                  target="_blank"
+                >
+                  <FaLinkedin
+                    size={35}
+                    className="hover:fill-blue-600 fill-text hover:scale-125 transition-all"
+                  />
+                </a>
+              </div>
             </div>
             <p className="mt-8">&copy; 2024 | Created by jsndwrd</p>
           </div>
