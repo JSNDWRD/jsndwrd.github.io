@@ -3,6 +3,7 @@ import Head from "next/head";
 import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import Skill from "@/components/Skill";
 import Navigation from "@/components/Navigation";
+import NavigationMobile from "@/components/NavigationMobile";
 import Button from "@/components/Button";
 import ProgressBar from "@/components/ProgressBar";
 import "@fontsource-variable/inter";
@@ -16,6 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <Navigation />
+      <NavigationMobile />
       <main className="bg-primary  lg:flex text-text lg:mt-20 mt-4">
         <ProgressBar />
         <section className="h-[calc(100vh-5rem)] mb-2 w-screen lg:w-1/3 flex flex-col justify-center">

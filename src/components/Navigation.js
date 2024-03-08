@@ -6,7 +6,7 @@ import profile from "../../public/profile.jpg";
 function Navigation() {
   return (
     <div>
-      <nav className="px-4 py-2 bg-primary h-20 text-text flex justify-between items-center fixed top-0 z-[100] w-full ">
+      <nav className="max-lg:hidden px-4 py-2 bg-primary h-20 text-text flex justify-between items-center fixed top-0 z-[100] w-full ">
         <div className=" flex items-center">
           <Image
             src={profile}
